@@ -46,6 +46,7 @@ module.exports = {
   target: "web",
   mode: isDevelopment ? "development" : "production",
   entry: {
+
     // The frontend.entrypoint points to the HTML file for this build, so we need
     // to replace the extension to `.js`.
     index: path.join(__dirname, asset_entry).replace(/\.html$/, ".js"),
@@ -103,6 +104,7 @@ module.exports = {
       process: require.resolve("process/browser"),
     }),
   ],
+  
   // proxy /api to port 8000 during development
   devServer: {
     proxy: {
